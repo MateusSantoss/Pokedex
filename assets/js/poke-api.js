@@ -11,6 +11,21 @@ function convertPokeApiDetailToPokemon(pokeDetail) {
     pokemon.types = types
     pokemon.type = type 
     pokemon.photo = pokeDetail.sprites.other.dream_world.front_default
+    let abilities = []
+    pokemon.ability = pokeDetail.abilities.forEach((ability) => {
+        abilities.push(ability['ability']['name']);
+      });
+      
+      pokemon.ability = abilities.join(' e ');
+      
+      if (abilities.length === 0) {
+        pokemon.ability = 'Habilidades não encontradas';
+      }
+
+
+
+    pokemon.height = pokeDetail.height
+    pokemon.weight = pokeDetail.weight
 
     return pokemon
     
