@@ -17,8 +17,8 @@ function loadPokemonItens (offset, limit) {
             
             `
             <div class="pokemon ${pokemon.type}" id="content">
-            
-            <li class="pokemon ${pokemon.type}" onclick="carregarPaginaPokemon()">
+            <button onclick="window.history.back() " style="width: 2rem; border: none;" class="${pokemon.type} buttonReturn"><</button>
+            <li class="pokemon ${pokemon.type} " onclick="carregarPaginaPokemon()">
                 <span class="number">${pokemon.Pnumber}</span>
                 <span class="name">${pokemon.name}</span>
         
